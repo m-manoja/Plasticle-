@@ -1,7 +1,8 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1;
   font-weight: 400;
+  text-align: center;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -28,13 +29,11 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  width: auto;
+  background-color: aquamarine;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
+/* Button Styling */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -54,6 +53,58 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Main App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+/* QR Placeholder Styling */
+.qr-placeholder {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Scan Result Styling */
+.scan-result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Camera Button Styling */
+.camera-button {
+  background-color: #0b7c09;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.camera-button:hover {
+  background-color: #0056b3;
+}
+
+/* Main Content Layout */
+.main-content {
+  width: 80%; /* Adjust width of main content */
+  text-align: center; /* Center the text/content inside the container */
+}
+
+/* Light Mode Customizations */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
